@@ -45,7 +45,7 @@ app.get("/allPositions", async (req, res) => {
   }
 });
 
-// ✅ Create new order
+// ✅ Create new order 
 app.post("/newOrder", async (req, res) => {
   try {
     let newOrder = new OrdersModel({
@@ -61,6 +61,24 @@ app.post("/newOrder", async (req, res) => {
     res.status(500).json({ error: "Failed to save order" });
   }
 });
+
+// ✅ Get all orders
+app.get("/AllOrders", async (req, res) => {
+  try {
+    const orders = await OrdersModel.find();
+    console.log("Orders fetched:", orders);
+    res.json(orders);
+  } catch (err) {
+    console.error("DB fetch error:", err);
+    res.status(500).json({ error: "Failed to fetch orders" });
+  }
+});
+
+
+
+
+
+
 
 // ================= Start server after DB connection =================
 mongoose.connect(uri)
