@@ -21,7 +21,7 @@ function CreatePage(){
                 
             </div>
             <div className='col-4 mt-2  ps-5'>
-                <h4 className='mb-3'><i class="fa-regular fa-user"></i> Your Zerodha Account</h4>
+                <h4 className='mb-3'><i class="fa-regular fa-user"></i> Your TradeWiz Account</h4>
                 <p className='mt-2'><a href=''style={{textDecoration:"none"}}>Login credentials</a></p>
                     <p className='mt-2'><a href=''style={{textDecoration:"none"}}>Your Profile</a></p>
                     <p className='mt-2'><a href=''style={{textDecoration:"none"}}>Account modification and segment addition</a></p>
